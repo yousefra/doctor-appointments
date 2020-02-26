@@ -1,7 +1,4 @@
-const mongoose = require('mongoose');
-
 const User = require('../models/users.model');
-const Role = require('../models/roles.model');
 
 // Add role
 /*
