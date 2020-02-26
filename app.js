@@ -14,8 +14,8 @@ const appointmentRoutes = require('./api/routes/appointments.route');
 // MongoDB connect
 mongoose.set('useCreateIndex', true);
 mongoose
-	.connect('mongodb://' + process.env.MONGO_SERVER + '/' + process.env.DBNAME, { useNewUrlParser: true })
-	.catch(function(err) {
+	.connect(`mongodb://${process.env.MONGO_SERVER}/${process.env.DBNAME}`, { useNewUrlParser: true, useUnifiedTopology: true })
+	.catch(function (err) {
 		console.log('Unable to connect to the mongodb instance. Error: ', err);
 	});
 

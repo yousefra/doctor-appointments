@@ -12,8 +12,8 @@ const userSchema = new Schema({
 		match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 	},
 	password: { type: String, required: true },
-	role: { type: Schema.Types.ObjectId, required: true },
-	phone: { type: Number, min: 10, max: 10 },
+	role: { type: Number, required: true },
+	phone: { type: String, min: 10, max: 10 },
 	major: { type: String }
 });
 
